@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sejarah</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="calculator-card">
+    <h2>Sejarah Kiraan</h2>
+    <p id="output"></p>
+
+    <a href="kalkulator.html">
+        <button>Kembali</button>
+    </a>
+</div>
+
+<script>
+let history = JSON.parse(localStorage.getItem("history")) || [];
+let output = "";
+
+history.forEach(function(item, index) {
+    output += "Pengiraan #" + (index + 1) + "<br>" +
+              "Harga Asal: RM " + item.price + "<br>" +
+              "Diskaun: " + item.discount + "%<br>" +
+              "Harga Akhir: RM " + item.total + "<br><br>";
+});
+
+document.getElementById("output").innerHTML = output;
+</script>
 </body>
 </html>
