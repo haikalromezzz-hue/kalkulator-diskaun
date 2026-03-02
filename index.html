@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kira Diskaun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-card">
+    <h2>Kalkulator Diskaun</h2>
+
+    <label>Harga Asal (RM)</label>
+    <input type="text" id="price">
+
+    <label>Diskaun (%)</label>
+    <input type="text" id="discount">
+
+    <button onclick="kira()">Kira</button>
+
+    <a href="sec1.html">
+    <button>Seterusnya</button>
+    </a>
+
+    <div class="result">
+        Jumlah Bayaran:
+        <span id="result"></span>
+    </div>
+
+    <!-- Notification area -->
+    <p id="notification" style="margin-top:15px; text-align:center; color:green; font-weight:bold;"></p>
+</div>
+
+<script>
+
+function kira() {
+
+    var price = document.getElementById("price").value;
+    var discount = document.getElementById("discount").value;
+
+    // BUG 1 – Tak convert ke Number
+    var diskaunAmount = (price * discount) / 100;
+
+    // BUG 2 – Salah formula
+    var total = diskaunAmount;
+
+    document.getElementById("result").innerHTML = total;
+
+    // 🧨 BUG TAMBAHAN – Notification tak relevan langsung
+    document.getElementById("notification").innerHTML =
+        "Pengiraan Diskaun Berjaya";
+}
+
+</script>
+</body>
+</html>

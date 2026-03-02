@@ -1,0 +1,85 @@
+/* style.css */
+
+/* Reset ringkas */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Kad kalkulator */
+.calculator-card {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 600px;
+    text-align: center;
+}
+
+/* Tajuk */
+.calculator-card h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Label dan input */
+.calculator-card label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.calculator-card input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.calculator-card input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button */
+.calculator-card button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.calculator-card button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Hasil */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Notification */
+#notification {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+    font-size: 14px;
+}
